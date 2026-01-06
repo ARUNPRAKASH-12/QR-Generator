@@ -1,0 +1,344 @@
+/* General Styling */
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Main App Container */
+.app-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start; /* Align to top for better spacing */
+  width: 90%;
+  max-width: 1000px;
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  gap: 20px;
+}
+
+/* QR Sections */
+.qr-section {
+  width: 45%;
+  padding: 20px;
+  border: 2px solid #333;
+  border-radius: 10px;
+  background-color: #f8f9fa;
+  text-align: center;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Headings */
+h1, h2 {
+  text-align: center;
+  color: #333;
+  font-size: 22px;
+  margin-bottom: 15px;
+}
+
+/* QR Code Styling */
+.qr-code {
+  margin: 15px auto;
+  width: 220px !important;
+  height: 220px !important;
+}
+
+/* QR Scanner Video */
+.qr-video {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 5px;
+  background: #000; /* Black background for better contrast */
+}
+
+/* Scanner Placeholder */
+.scanner-placeholder {
+  padding: 20px;
+  color: #666;
+  font-size: 16px;
+  background: #eee;
+  border-radius: 5px;
+  margin: 10px 0;
+}
+
+/* Buttons */
+.button-group {
+  margin-top: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+button {
+  padding: 10px 15px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.scan-btn {
+  background-color: #28a745;
+  color: white;
+}
+
+.stop-btn {
+  background-color: #dc3545;
+  color: white;
+}
+
+.upload-btn {
+  background-color: #007bff;
+  color: white;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+/* Scanned Data Display */
+.scan-result {
+  margin-top: 15px;
+  font-weight: bold;
+  color: #333;
+  word-break: break-all; /* Prevent long text overflow */
+  padding: 10px;
+  background: #f0f0f0;
+  border-radius: 5px;
+}
+
+/* Error Message */
+.error-text {
+  color: red;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+/* File Upload Section */
+.file-upload-section {
+  margin-top: 15px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .app-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .qr-section {
+    width: 90%;
+    margin-bottom: 20px;
+  }
+}
+/* Add these styles to your existing CSS */
+
+.scan-result-content {
+  display: inline-block;
+  margin-top: 5px;
+  word-break: break-all;
+}
+
+.scan-result-content a {
+  color: #007bff;
+  text-decoration: underline;
+}
+
+.scan-result-content a:hover {
+  color: #0056b3;
+  text-decoration: none;
+}
+.qr-scanner-container {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.qr-video {
+  background: #000;
+  border-radius: 8px;
+  margin: 10px 0;
+}
+
+.scanner-placeholder {
+  background: #f0f0f0;
+  padding: 40px;
+  border-radius: 8px;
+  margin: 10px 0;
+}
+
+.button-group {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 500;
+  min-width: 120px;
+}
+
+.scan-btn {
+  background: #4CAF50;
+  color: white;
+}
+
+.stop-btn {
+  background: #f44336;
+  color: white;
+}
+
+.upload-btn {
+  background: #2196F3;
+  color: white;
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.error-message {
+  color: #f44336;
+  background: #ffebee;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.scan-result {
+  margin: 15px 0;
+  padding: 10px;
+  background: #f5f5f5;
+  border-radius: 5px;
+  word-break: break-all;
+}
+.qr-generator-container {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 2rem;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.generator-title {
+  color: #2c3e50;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+}
+
+.qr-input {
+  width: 90%;
+  padding: 0.8rem 1rem;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+  transition: border 0.3s ease;
+}
+
+.qr-input:focus {
+  outline: none;
+  border-color: #3498db;
+}
+
+.controls-section {
+  margin-bottom: 1.5rem;
+}
+
+.control-group {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.control-group label {
+  font-weight: 500;
+  color: #4a5568;
+}
+
+.control-group input[type="range"] {
+  flex-grow: 1;
+}
+
+.color-controls {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.color-control {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.color-control label {
+  font-size: 0.9rem;
+  color: #4a5568;
+}
+
+.color-control input[type="color"] {
+  width: 50px;
+  height: 40px;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+.qr-display {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+  padding: 1.5rem;
+  background: #f8f9fa;
+  border-radius: 8px;
+}
+
+.download-btn {
+  padding: 0.8rem 1.5rem;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.download-btn:hover {
+  background-color: #2980b9;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 600px) {
+  .qr-generator-container {
+    padding: 1.5rem;
+  }
+  
+  .color-controls {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
