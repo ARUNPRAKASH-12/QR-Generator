@@ -1,6 +1,6 @@
 # 🔐 QR-Generator
 
-A full-stack secure payment solution that leverages QR code technology for seamless and secure transactions. This system enables users to generate QR codes for payment requests and scan them to process payments efficiently.
+A full-stack QR code generation and scanning application. This system enables users to generate QR codes for any text or data and scan them using their device camera.
 
 ![License](https://img.shields.io/badge/license-ISC-blue.svg)
 ![Node](https://img.shields.io/badge/node-%3E%3D14.0.0-brightgreen.svg)
@@ -9,18 +9,17 @@ A full-stack secure payment solution that leverages QR code technology for seaml
 ## ✨ Features
 
 ### Frontend
-- 📱 **QR Code Generation**: Create secure QR codes containing payment details
+- 📱 **QR Code Generation**: Create QR codes from any text or data
 - 🔍 **QR Code Scanner**: Real-time QR code scanning using device camera
-- 💳 **Payment Interface**: User-friendly interface for payment processing
+- 💾 **Save & Download**: Download generated QR codes as images
 - 🎨 **Responsive Design**: Works seamlessly across desktop and mobile devices
-- ⚡ **Real-time Updates**: Instant payment status updates
+- ⚡ **Real-time Updates**: Instant QR code generation and scanning
 
 ### Backend
-- 🔒 **Secure API**: RESTful API endpoints for payment processing
-- 💾 **MongoDB Integration**: Persistent storage for payment records
-- 🔐 **Data Encryption**: Secure handling of sensitive payment information
+- 🔒 **Secure API**: RESTful API endpoints for QR code storage
+- 💾 **MongoDB Integration**: Persistent storage for QR code records
 - 🚀 **Express Server**: Fast and reliable backend infrastructure
-- 📊 **Payment History**: Track and retrieve past transactions
+- 📊 **History**: Track and retrieve previously generated QR codes
 
 ## 🏗️ Project Structure
 
@@ -73,8 +72,7 @@ QR-Generator/
    Create a `.env` file in the `backend` directory:
    ```env
    PORT=5000
-   MONGODB_URI=mongodb://localhost:27017/qr-payment-system
-   JWT_SECRET=your_jwt_secret_key_here
+   MONGODB_URI=mongodb://localhost:27017/qr-generator
    ```
 
 4. **Set up the Frontend**
@@ -103,29 +101,27 @@ QR-Generator/
 
 ## 📡 API Endpoints
 
-### Payments
+### QR Codes
 
 | Method | Endpoint | Description |
 |--------|----------|-------------|
-| POST | `/api/payments` | Create a new payment record |
-| GET | `/api/payments` | Retrieve all payment records |
+| POST | `/api/qrcodes` | Create a new QR code record |
+| GET | `/api/qrcodes` | Retrieve all QR code records |
 
-#### Request Body (POST /api/payments)
+#### Request Body (POST /api/qrcodes)
 ```json
 {
-  "amount": 100.00,
-  "description": "Product purchase",
-  "qrData": "encrypted_payment_data"
+  "data": "Your text or data here",
+  "description": "Optional description"
 }
 ```
 
 #### Response
 ```json
 {
-  "_id": "payment_id",
-  "amount": 100.00,
-  "description": "Product purchase",
-  "qrData": "encrypted_payment_data",
+  "_id": "qrcode_id",
+  "data": "Your text or data here",
+  "description": "Optional description",
   "createdAt": "2026-01-06T12:00:00.000Z",
   "updatedAt": "2026-01-06T12:00:00.000Z"
 }
@@ -145,16 +141,12 @@ QR-Generator/
 - **Express** - Web framework
 - **MongoDB** - Database
 - **Mongoose** - ODM for MongoDB
-- **bcryptjs** - Password hashing
-- **jsonwebtoken** - JWT authentication
 - **dotenv** - Environment configuration
 - **CORS** - Cross-origin resource sharing
 
 ## 🔒 Security Features
 
-- 🔐 Encrypted QR data transmission
-- 🛡️ JWT-based authentication
-- 🔑 Bcrypt password hashing
+- 🔐 Secure data transmission
 - 🚫 CORS protection
 - ✅ Input validation and sanitization
 
@@ -179,8 +171,8 @@ This project is licensed under the ISC License.
 ## 🙏 Acknowledgments
 
 - Thanks to all contributors who have helped shape this project
-- Inspired by modern payment systems and QR technology
-- Built with ❤️ for secure and efficient transactions
+- Inspired by QR code technology and its versatile applications
+- Built with ❤️ for easy QR code generation and scanning
 
 ## 📧 Contact
 
